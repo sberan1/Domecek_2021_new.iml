@@ -1,9 +1,12 @@
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 	  Obrazek obrazek = new Obrazek();
       obrazek.kresli();
       obrazek.prujezdAuta();
+      obrazek.vychodSlunce();
+      Thread.sleep(6000);
+      obrazek.zapadSlunce();
       //new Obrazek().kresli();
     }
 }

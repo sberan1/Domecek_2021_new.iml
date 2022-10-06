@@ -50,12 +50,13 @@ public class Obrazek
 		strecha.posunHorizontalne(60);
 		strecha.posunVertikalne(70);
 
+		/*
 		slunce = new Kruh();
 		slunce.zmenBarvu("zluta");
 		slunce.zmenVelikost(50);
 		slunce.posunHorizontalne(180);
 		slunce.posunVertikalne(-50);
-
+		*/
 	}
 
 	/**
@@ -94,4 +95,31 @@ public class Obrazek
 			auto.pomaluPosunHorizontalne(300);
 	    }
 	}
+
+	/*
+	Pri zavolani metody vyjde slunce pokud neni na obloze
+	 */
+	public void vychodSlunce(){
+		if (slunce == null) {
+			setCernoBily();
+			slunce = new Kruh();
+			slunce.zmenBarvu("zluta");
+			slunce.zmenVelikost(60);
+			slunce.posunVertikalne(-10);
+			slunce.posunHorizontalne(-60);
+			slunce.pomaluPosunHorizontalne(60);
+			setBarevny();
+			slunce.pomaluPosunHorizontalne(180);
+		}
+	}
+
+		public void zapadSlunce(){
+		if (slunce != null){
+			slunce.pomaluPosunHorizontalne(60);
+			setCernoBily();
+			slunce.pomaluPosunHorizontalne(180);
+			slunce = null;
+		}
+	}
 }
+
