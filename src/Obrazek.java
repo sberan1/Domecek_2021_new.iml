@@ -21,6 +21,8 @@ public class Obrazek
 	private Trojuhelnik strecha;
 	private Kruh slunce;
 
+
+
 	/**
 	 * Konstruktor pro vytvoreni instance tridy Obrazek
 	 */
@@ -84,7 +86,26 @@ public class Obrazek
 			strecha.zmenBarvu("zelena");
 		}
 	}
-	
+
+	private Auto noveAuto = null;
+	public void prijezdNovehoAuta(){
+		//otazka jestli uz nase nove Auto nahodou neexistuje
+		if (noveAuto == null){
+			//vygenerujeme nove auto mimo platno
+			noveAuto = new Auto(-200, 240);
+			//zmenime novemu autu barvu na nejakou jinou, nez je zakladni modra
+			noveAuto.zmenBarvu("zelena");
+			//posuneme ho nekam do frame
+			noveAuto.pomaluPosunHorizontalne(300);
+		}
+	}
+
+	public void odjezdNovehoAuta(){
+		//potrebujeme aby nase auto nejdrive existovalo, aby mohlo odjet, proto se ptame jestli uz existuje
+		if (noveAuto != null){
+			noveAuto.pomaluPosunHorizontalne(200);
+		}
+	}
 	/**
 	 * pri zavolani teto metody by melo pred domeckem projet auto
 	 */
