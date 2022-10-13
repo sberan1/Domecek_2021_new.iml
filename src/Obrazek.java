@@ -87,7 +87,7 @@ public class Obrazek
 		}
 	}
 
-	private Auto noveAuto = null;
+	private Auto noveAuto;
 	public void prijezdNovehoAuta(){
 		//otazka jestli uz nase nove Auto nahodou neexistuje
 		if (noveAuto == null){
