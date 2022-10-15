@@ -129,7 +129,7 @@ public class Platno
 
     /**
      * Erases a given shape's outline on the screen.
-     * @param  shape  the shape object to be erased 
+     * @param tvar the shape object to be erased
      */
     public void eraseOutline(Shape tvar)
     {

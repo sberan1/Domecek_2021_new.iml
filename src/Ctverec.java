@@ -28,6 +28,15 @@ public class Ctverec
         kresli();
     }
 
+    // zalozeni noveho kontruktoru pro vyuziti v ukolu
+    public Ctverec(int velikost, int xPozice, int yPozice, String barva) {
+        this.velikost = velikost;
+        this.xPozice = xPozice;
+        this.yPozice = yPozice;
+        this.barva = barva;
+        kresli();
+    }
+
     /**
      * Posune ctverec o nekolik bodu (20) doprava.
      */

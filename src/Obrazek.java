@@ -23,6 +23,7 @@ public class Obrazek
 
 
 
+
 	/**
 	 * Konstruktor pro vytvoreni instance tridy Obrazek
 	 */
@@ -51,6 +52,8 @@ public class Obrazek
 		strecha.zmenVelikost(50, 140);
 		strecha.posunHorizontalne(60);
 		strecha.posunVertikalne(70);
+
+		kamion = new Kamion();
 
 		/*
 		slunce = new Kruh();
@@ -87,6 +90,21 @@ public class Obrazek
 		}
 	}
 
+	private Kamion kamion;
+	public void prijezdKamionu(){
+		if (kamion == null){
+			//vygenerujeme kamion mimo platno
+			kamion = new Kamion(-200, 240);
+			//posuneme ho nekam do frame
+			kamion.pomaluPosunHorizontalne(300);
+	}
+	}
+	public void odjezdKamionu(){
+		//potrebujeme aby kamion nejdrive existoval, aby mohl odjet, proto se ptame jestli uz existuje
+		if (kamion != null){
+			kamion.pomaluPosunHorizontalne(200);
+		}
+	}
 	private Auto noveAuto;
 	public void prijezdNovehoAuta(){
 		//otazka jestli uz nase nove Auto nahodou neexistuje
@@ -99,7 +117,6 @@ public class Obrazek
 			noveAuto.pomaluPosunHorizontalne(300);
 		}
 	}
-
 	public void odjezdNovehoAuta(){
 		//potrebujeme aby nase auto nejdrive existovalo, aby mohlo odjet, proto se ptame jestli uz existuje
 		if (noveAuto != null){

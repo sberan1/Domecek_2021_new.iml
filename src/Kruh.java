@@ -29,6 +29,14 @@ public class Kruh
         kresli();
     }
 
+    public Kruh(int prumer, int xPozice, int yPozice, String barva) {
+        this.prumer = prumer;
+        this.xPozice = xPozice;
+        this.yPozice = yPozice;
+        this.barva = barva;
+        kresli();
+    }
+
     /**
      * Posune kruh o nekolik bodu (o 20) doprava.
      */
